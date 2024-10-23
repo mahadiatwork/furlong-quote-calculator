@@ -4,10 +4,10 @@ import Box from "@mui/material/Box";
 import { Heading1 } from "../atoms/Heading1";
 import { Text1 } from "../atoms/Text1";
 
-export const Line1 = () => {
+export const HeadingLine = ({ sx }) => {
   return (
-    <Grid container spacing={2}>
-      <Grid size={6} sx={{ display: "flex", gap: "1em", bgcolor: "" }}>
+    <Grid container spacing={2} sx={sx}>
+      <Grid size={6} sx={{ display: "flex", gap: "1em" }}>
         <Box>
           <Heading1 text="Q123456" />
         </Box>
@@ -16,7 +16,7 @@ export const Line1 = () => {
           <Text1 text="123 street, dhaka ctg." />
         </Box>
       </Grid>
-      <Grid size={6} sx={{ bgcolor: "" }}>
+      <Grid size={6}>
         <Heading1
           component="p"
           text="Total Quote Amount:"

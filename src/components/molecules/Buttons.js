@@ -21,9 +21,9 @@ const CutomButton = ({ children, ...rest }) => (
   </Button>
 );
 
-export function Buttons() {
+export function Buttons({ sx }) {
   return (
-    <Stack direction="row" spacing={2}>
+    <Stack direction="row" spacing={2} sx={sx}>
       <CutomButton onClick={() => {}}>Contained</CutomButton>
       <CutomButton onClick={() => {}} disabled={true}>
         Disabled
