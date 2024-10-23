@@ -5,6 +5,9 @@ import Tab from "@mui/material/Tab";
 import Box from "@mui/material/Box";
 import Grid from "@mui/material/Grid2";
 import { DenseTable } from "./DenseTable";
+import { Heading2 } from "../atoms/Heading2";
+import { Text1 } from "../atoms/Text1";
+import { BoldText1 } from "../atoms/BoldText1";
 
 function CustomTabPanel(props) {
   const { children, value, index, ...other } = props;
@@ -17,7 +20,7 @@ function CustomTabPanel(props) {
       aria-labelledby={`simple-tab-${index}`}
       {...other}
     >
-      {value === index && <Box sx={{ p: 3 }}>{children}</Box>}
+      {value === index && <Box>{children}</Box>}
     </div>
   );
 }
@@ -43,7 +46,9 @@ export function CustomTabs({ sx }) {
   };
 
   return (
-    <Box sx={{ width: "100%", bgcolor: "rgba(0, 0, 0, 0.12)", ...sx }}>
+    <Box
+      sx={{ p: "1em", width: "100%", bgcolor: "rgba(0, 0, 0, 0.12)", ...sx }}
+    >
       <Tabs
         value={value}
         onChange={handleChange}
@@ -67,18 +72,39 @@ export function CustomTabs({ sx }) {
       </Tabs>
 
       <Grid container spacing={2}>
-        <Grid size={8}>
-          <CustomTabPanel value={value} index={0}>
-            <DenseTable />
-          </CustomTabPanel>
-          <CustomTabPanel value={value} index={1}>
-            {/* <DenseTable /> */}
-          </CustomTabPanel>
-          <CustomTabPanel value={value} index={2}>
-            <DenseTable />
-          </CustomTabPanel>
+        <Grid size={8} sx={{ display: "flex", flexDirection: "column" }}>
+          <Box sx={{ flexGrow: 1 }}>
+            <CustomTabPanel value={value} index={0}>
+              <DenseTable />
+            </CustomTabPanel>
+            <CustomTabPanel value={value} index={1}>
+              {/* <DenseTable /> */}
+            </CustomTabPanel>
+            <CustomTabPanel value={value} index={2}>
+              <DenseTable />
+            </CustomTabPanel>
+          </Box>
+          <BoldText1 text="Total Labour Cost:" redText="50,000.00" />
         </Grid>
-        <Grid size={4}></Grid>
+        <Grid
+          size={4}
+          sx={{
+            bgcolor: "white",
+            boxShadow:
+              "0px 2px 1px -1px rgba(0, 0, 0, 0.2), 0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12)",
+            borderRadius: "4px",
+            p: ".33em 1em",
+          }}
+        >
+          <Heading2 text="Summery - Part A" />
+          <Text1 text="Labour cost: AUD 5000.00" />
+          <Text1 text="Labour cost: AUD 5000.00" />
+          <Text1 text="Labour cost: AUD 5000.00" />
+          <Text1 text="Labour cost: AUD 5000.00" />
+          <Text1 text="Labour cost: AUD 5000.00" />
+          <Text1 text="Labour cost: AUD 5000.00" />
+          <BoldText1 text="Total Part Cost:" redText="50,000.00" />
+        </Grid>
       </Grid>
     </Box>
   );
