@@ -47,7 +47,13 @@ export function CustomTabs({ sx }) {
 
   return (
     <Box
-      sx={{ p: "1em", width: "100%", bgcolor: "rgba(0, 0, 0, 0.12)", ...sx }}
+      sx={{
+        p: "1em",
+        borderRadius: "4px",
+        width: "100%",
+        bgcolor: "rgba(0, 0, 0, 0.12)",
+        ...sx,
+      }}
     >
       <Tabs
         value={value}
