@@ -1,9 +1,9 @@
-
-
+import Box from "@mui/material/Box";
 function App() {
   return (
-    <div>
-    </div>
+    <Box sx={{ minHeight: "100vh", width: "100vw", bgcolor: "red" }}>
+      
+    </Box>
   );
 }
 
