@@ -100,15 +100,19 @@ export function CustomTabs({ sx }) {
               "0px 2px 1px -1px rgba(0, 0, 0, 0.2), 0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12)",
             borderRadius: "4px",
             p: ".33em 1em",
+            display: "flex",
+            flexDirection: "column",
           }}
         >
-          <Heading2 text="Summery - Part A" />
-          <Text1 text="Labour cost: AUD 5000.00" />
-          <Text1 text="Labour cost: AUD 5000.00" />
-          <Text1 text="Labour cost: AUD 5000.00" />
-          <Text1 text="Labour cost: AUD 5000.00" />
-          <Text1 text="Labour cost: AUD 5000.00" />
-          <Text1 text="Labour cost: AUD 5000.00" />
+          <Box sx={{ flexGrow: 1 }}>
+            <Heading2 text="Summery - Part A" />
+            <Text1 text="Labour cost: AUD 5000.00" />
+            <Text1 text="Labour cost: AUD 5000.00" />
+            <Text1 text="Labour cost: AUD 5000.00" />
+            <Text1 text="Labour cost: AUD 5000.00" />
+            <Text1 text="Labour cost: AUD 5000.00" />
+            <Text1 text="Labour cost: AUD 5000.00" />
+          </Box>
           <BoldText1 text="Total Part Cost:" redText="50,000.00" />
         </Grid>
       </Grid>

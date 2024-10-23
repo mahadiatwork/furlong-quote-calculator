@@ -7,6 +7,7 @@ const CutomButton = ({ children, ...rest }) => (
     variant="contained"
     disableRipple
     sx={{
+      textTransform: "capitalize",
       boxShadow: "none",
       color: "rgba(0, 0, 0, 0.26)",
       bgcolor: "rgba(0, 0, 0, 0.12)",
@@ -24,14 +25,14 @@ const CutomButton = ({ children, ...rest }) => (
 export function Buttons({ sx }) {
   return (
     <Stack direction="row" spacing={2} sx={sx}>
-      <CutomButton onClick={() => {}}>Contained</CutomButton>
+      <CutomButton onClick={() => {}}>Part 1</CutomButton>
       <CutomButton onClick={() => {}} disabled={true}>
-        Disabled
+        Part 2
       </CutomButton>
-      <CutomButton onClick={() => {}}>Link</CutomButton>
-      <CutomButton onClick={() => {}}>Link</CutomButton>
-      <CutomButton onClick={() => {}}>Link</CutomButton>
-      <CutomButton onClick={() => {}}>Link</CutomButton>
+      <CutomButton onClick={() => {}}>Part 3</CutomButton>
+      <CutomButton onClick={() => {}}>Part 4</CutomButton>
+      <CutomButton onClick={() => {}}>Part 5</CutomButton>
+      <CutomButton onClick={() => {}}>Part 6</CutomButton>
     </Stack>
   );
 }
