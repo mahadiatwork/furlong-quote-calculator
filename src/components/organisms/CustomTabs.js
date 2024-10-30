@@ -4,10 +4,12 @@ import Tabs from "@mui/material/Tabs";
 import Tab from "@mui/material/Tab";
 import Box from "@mui/material/Box";
 import Grid from "@mui/material/Grid2";
-import { DenseTable } from "./DenseTable";
 import { Heading2 } from "../atoms/Heading2";
 import { Text1 } from "../atoms/Text1";
 import { BoldText1 } from "../atoms/BoldText1";
+import LaborCalculator from "./LaborCalculator";
+import PaintCalculator from "./PaintCalculator";
+import TravelAccommodationCalculator from "./TravelAccomodation";
 
 function CustomTabPanel(props) {
   const { children, value, index, ...other } = props;
@@ -61,17 +63,42 @@ export function CustomTabs({ sx }) {
         aria-label="basic tabs example"
       >
         <Tab
-          label="Item One"
+          label="Labor"
           sx={{ textTransform: "capitalize" }}
           {...a11yProps(0)}
         />
         <Tab
-          label="Item Two"
+          label="Paint"
           sx={{ textTransform: "capitalize" }}
           {...a11yProps(1)}
         />
         <Tab
-          label="Item Three"
+          label="Travel/Accom"
+          sx={{ textTransform: "capitalize" }}
+          {...a11yProps(2)}
+        />
+        <Tab
+          label="Access"
+          sx={{ textTransform: "capitalize" }}
+          {...a11yProps(2)}
+        />
+        <Tab
+          label="Parking"
+          sx={{ textTransform: "capitalize" }}
+          {...a11yProps(2)}
+        />
+        <Tab
+          label="External Trades"
+          sx={{ textTransform: "capitalize" }}
+          {...a11yProps(2)}
+        />
+        <Tab
+          label="Equipment"
+          sx={{ textTransform: "capitalize" }}
+          {...a11yProps(2)}
+        />
+        <Tab
+          label="3rd Party"
           sx={{ textTransform: "capitalize" }}
           {...a11yProps(2)}
         />
@@ -81,13 +108,13 @@ export function CustomTabs({ sx }) {
         <Grid size={8} sx={{ display: "flex", flexDirection: "column" }}>
           <Box sx={{ flexGrow: 1 }}>
             <CustomTabPanel value={value} index={0}>
-              <DenseTable />
+              <LaborCalculator />
             </CustomTabPanel>
             <CustomTabPanel value={value} index={1}>
-              {/* <DenseTable /> */}
+              <PaintCalculator />
             </CustomTabPanel>
             <CustomTabPanel value={value} index={2}>
-              <DenseTable />
+              <TravelAccommodationCalculator />
             </CustomTabPanel>
           </Box>
           <BoldText1 text="Total Labour Cost:" redText="50,000.00" />
@@ -106,13 +133,15 @@ export function CustomTabs({ sx }) {
         >
           <Box sx={{ flexGrow: 1 }}>
             <Heading2 text="Summery - Part A" />
-            <Text1 text="Labour cost: AUD 5000.00" />
-            <Text1 text="Labour cost: AUD 5000.00" />
-            <Text1 text="Labour cost: AUD 5000.00" />
-            <Text1 text="Labour cost: AUD 5000.00" />
-            <Text1 text="Labour cost: AUD 5000.00" />
-            <Text1 text="Labour cost: AUD 5000.00" />
+            <br />
+            <Text1 text="Labour cost: AUD 5000.00" sx={{ mb: 2 }} />
+            <Text1 text="Labour cost: AUD 5000.00" sx={{ mb: 2 }} />
+            <Text1 text="Labour cost: AUD 5000.00" sx={{ mb: 2 }} />
+            <Text1 text="Labour cost: AUD 5000.00" sx={{ mb: 2 }} />
+            <Text1 text="Labour cost: AUD 5000.00" sx={{ mb: 2 }} />
+            <Text1 text="Labour cost: AUD 5000.00" sx={{ mb: 2 }} />
           </Box>
+
           <BoldText1 text="Total Part Cost:" redText="50,000.00" />
         </Grid>
       </Grid>

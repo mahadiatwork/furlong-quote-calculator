@@ -4,12 +4,12 @@ import Box from "@mui/material/Box";
 import { Heading1 } from "../atoms/Heading1";
 import { Text1 } from "../atoms/Text1";
 
-export const HeadingLine = ({ sx }) => {
+export const HeadingLine = ({ sx,quoteData }) => {
   return (
     <Grid container spacing={2} sx={sx}>
-      <Grid size={6} sx={{ display: "flex", gap: "1em" }}>
+      <Grid size={6} sx={{ display: "flex", gap: "2em",padding: "20px" }}>
         <Box>
-          <Heading1 text="Q123456" />
+          <Heading1 text={quoteData?.Name} />
         </Box>
         <Box>
           <Text1 text="ABCD Primary School" />
